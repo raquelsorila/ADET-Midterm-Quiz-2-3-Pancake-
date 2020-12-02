@@ -13,7 +13,6 @@ namespace Portal.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Student_ID = table.Column<int>(nullable: false),
                     Last_Name = table.Column<string>(nullable: true),
                     First_Name = table.Column<string>(nullable: true),
                     Birthdate = table.Column<DateTime>(nullable: false),

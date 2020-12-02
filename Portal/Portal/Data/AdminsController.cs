@@ -22,7 +22,6 @@ namespace Portal.Data
         // GET: Admins
         public async Task<IActionResult> Index()
         {
-            System.Diagnostics.Debug.WriteLine(_context.Admin.ToListAsync());
             return View(await _context.Admin.ToListAsync());
         }
 
