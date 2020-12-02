@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    p {
+        font-family: Cambria;
+        font-size: 100px;
+        font-weight: bold;
+        margin-top:150px;
+       
+        line-height:45%;
+    }
+    h5 {
+        font-family: Cambria;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 90px;
+    }       
+</style>
+<div class="text-center">
+    <p>Pancake University</p>
+    <h5>Portal</h5>
+
+    <div class=" ">
+        <a class="btn btn-primary" asp-area="" asp-controller="Admins" asp-action="Index">Admin</a>
+        <a class="btn btn-danger" asp-area="" asp-controller="Student" asp-action="Details">Student</a>
+    </div>
+    
+</div>
