@@ -4,56 +4,53 @@
     ViewData["Title"] = "Edit";
 }
 <style>
-    .row {
-        margin-left: -100px;
-    }
-    .Save {
-        margin-left: -80px;
+    .sinfo{
+        margin-top:50px;
     }
     .TableGradesPrelim {
         position: absolute;
         float: left;
         top: 75px;
-        margin-left:250px;
+        margin-left:300px;
         margin-bottom: 10px;
     }
     .TableGradesMidterm {
         position: absolute;
         float: left;
         top: 107px;
-        margin-left: 750px;
+        margin-left: 720px;
         margin-bottom: 10px;
     }
     .TableGradesPrefinals {
         position: absolute;
         float: left;
         top: 410px;
-        margin-left: 250px;
+        margin-left: 300px;
         
     }
     .TableGradesFinals {
         position: absolute;
         float: left;
         top: 410px;
-        margin-left: 750px;
+        margin-left: 720px;
         
     }
 
     table {
-        width: 480px;
+        width: 400px;
         
     }
     th, td {
         align-content: center;
         height: 20px; 
     }
-    .gra{
-        margin-left:450px;
+    .gra {
+        margin-left: 380px;
     }
 </style>
 
 <form asp-action="Edit">
-    <h5 class="Save">Student Information</h5>
+    <h5 class="sinfo">Student Information</h5>
     <div class="row">
 
         <div class="col-md-3">
@@ -109,9 +106,9 @@
             <thead class="thead-light">
                 <tr>
                     <th> </th>
-                    <th>#1</th>
-                    <th>#2</th>
-                    <th>#3</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -156,7 +153,7 @@
                     </td>
                 </tr>
                 <tr class="bg-secondary text-light">
-                    <td colspan="4">Total Average</td>
+                    <td colspan="4">Average</td>
 
                     <td>
                         <input asp-for="Prelim" class="form-control" />
@@ -181,9 +178,9 @@
             <thead class="thead-light">
                 <tr>
                     <th> </th>
-                    <th>#1</th>
-                    <th>#2</th>
-                    <th>#3</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -228,7 +225,7 @@
                     </td>
                 </tr>
                 <tr class="bg-secondary text-light">
-                    <td colspan="4">Total Average</td>
+                    <td colspan="4">Average</td>
 
                     <td>
                         <input asp-for="Midterm" class="form-control" />
@@ -254,9 +251,9 @@
             <thead class="thead-light">
                 <tr>
                     <th> </th>
-                    <th>#1</th>
-                    <th>#2</th>
-                    <th>#3</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -301,7 +298,7 @@
                     </td>
                 </tr>
                 <tr class="bg-secondary text-light">
-                    <td colspan="4">Total Average</td>
+                    <td colspan="4">Average</td>
 
                     <td>
                         <input asp-for="Prefinals" class="form-control" />
@@ -327,9 +324,9 @@
             <thead class="thead-light">
                 <tr>
                     <th> </th>
-                    <th>#1</th>
-                    <th>#2</th>
-                    <th>#3</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -374,7 +371,7 @@
                     </td>
                 </tr>
                 <tr class="bg-secondary text-light">
-                    <td colspan="4">Total Average</td>
+                    <td colspan="4">Average</td>
 
                     <td>
                         <input asp-for="Finals" class="form-control" />

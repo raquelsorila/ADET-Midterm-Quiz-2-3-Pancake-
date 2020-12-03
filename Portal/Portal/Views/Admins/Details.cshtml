@@ -4,8 +4,20 @@
 @{
     ViewData["Title"] = "Details";
 }
+<style>
+    .info{
+        margin-left:150px;
+        margin-top:50px;
+    }
 
-<div>
+    .info table{
+        font-family:Tahoma;
+        font-size:13px;
+    }
+
+</style>
+
+<div class="info">
     <!--<hr />-->
     <dl class="row">
         <dt class="col-sm-2">
@@ -50,9 +62,9 @@
             <thead class="thead-light">
                 <tr>
                     <th> </th>
-                    <th>#1</th>
-                    <th>#2</th>
-                    <th>#3</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -72,7 +84,7 @@
                     <td>@Html.DisplayFor(model => model.PaAve)</td>
                 </tr>
                 <tr class="bg-secondary text-light">
-                    <td colspan="4">Total Average</td>
+                    <td colspan="4">Average</td>
                     <td>@Html.DisplayFor(model => model.Prelim)</td>
                 </tr>
             </tbody>
@@ -93,9 +105,9 @@
             <thead class="thead-light">
                 <tr>
                     <th> </th>
-                    <th>#1</th>
-                    <th>#2</th>
-                    <th>#3</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -115,7 +127,7 @@
                     <td>@Html.DisplayFor(model => model.MaAve)</td>
                 </tr>
                 <tr class="bg-secondary text-light">
-                    <td colspan="4">Total Average</td>
+                    <td colspan="4">Average</td>
                     <td>@Html.DisplayFor(model => model.Midterm)</td>
                 </tr>
             </tbody>
@@ -136,9 +148,9 @@
             <thead class="thead-light">
                 <tr>
                     <th> </th>
-                    <th>#1</th>
-                    <th>#2</th>
-                    <th>#3</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -158,7 +170,7 @@
                     <td>@Html.DisplayFor(model => model.PfaAve)</td>
                 </tr>
                 <tr class="bg-secondary text-light">
-                    <td colspan="4">Total Average</td>
+                    <td colspan="4">Average</td>
                     <td>@Html.DisplayFor(model => model.Prefinals)</td>
                 </tr>
             </tbody>
@@ -179,9 +191,9 @@
             <thead class="thead-light">
                 <tr>
                     <th> </th>
-                    <th>#1</th>
-                    <th>#2</th>
-                    <th>#3</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -201,7 +213,7 @@
                     <td>@Html.DisplayFor(model => model.FaAve)</td>
                 </tr>
                 <tr class="bg-secondary text-light">
-                    <td colspan="4">Total Average</td>
+                    <td colspan="4">Average</td>
                     <td>@Html.DisplayFor(model => model.Finals)</td>
                 </tr>
             </tbody>

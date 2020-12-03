@@ -6,7 +6,7 @@
         font-family: Cambria;
         font-size: 100px;
         font-weight: bold;
-        margin-top:150px;
+        margin-top:100px;
        
         line-height:45%;
     }
@@ -14,16 +14,138 @@
         font-family: Cambria;
         font-weight: bold;
         font-size: 30px;
-        margin-bottom: 90px;
-    }       
+        margin-bottom: 130px;
+    }
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+        width: 300px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        text-align:center;
+    }
+
+    /* Set a style for all buttons */
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 16px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100px;
+    }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+        width: 100px;
+        padding: 10px 16px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        background-color: #f44336;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        position: absolute;
+        display: none; /* Hidden by default */
+        z-index: 10; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        margin-left: 440px;
+        margin-top: 250px;
+        position: absolute;
+        background-color: dodgerblue;
+        width: 400px; /* Could be more or less, depending on screen size */
+    }
+    .modal1-content {
+        margin-left: 440px;
+        margin-top: 250px;
+        position: absolute;
+        background-color: indianred;
+        width: 400px; /* Could be more or less, depending on screen size */
+    }
+
+
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+
 </style>
 <div class="text-center">
     <p>Pancake University</p>
     <h5>Portal</h5>
-
+    <center>
     <div class=" ">
-        <a class="btn btn-primary" asp-area="" asp-controller="Admins" asp-action="Index">Admin</a>
-        <a class="btn btn-danger" asp-area="" asp-controller="Student" asp-action="Details">Student</a>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="btn btn-primary">Admin</button>
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class="btn btn-danger">Student</button>
     </div>
-    
+
+
+
+    <div id="id01" class="modal">
+        <form class="modal-content animate" asp-area="" asp-controller="Admins" asp-action="Index" method="post">
+            <div class="container">
+                <input type="text" placeholder="Enter Username" name="admin" required>
+                <input type="password" placeholder="Enter Password" name="admin" required>
+                <button type="submit">Login</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="id02" class="modal">
+        <form class="modal1-content animate" asp-area="" asp-controller="Student" asp-action="Details" method="post">
+            <div class="container">
+                <input type="text" placeholder="Student ID" name="student" required>
+                <input type="password" placeholder="Password" name="student" required>
+                <button type="submit">Login</button>
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        //validation
+        var adminU = document.getEle
+
+        // Get the modal
+        var modal = document.getElementById('id01');
+        var modal1 = document.getElementById('id02');
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            else if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+        }
+    </script>
+    </center>
+
+
 </div>

@@ -7,12 +7,23 @@
     ViewData["Title"] = "Student's List";
 }
 
-
-<div class="text-center">
-    <h1 class="display-3">Student's List</h1>
+<style>
+    .title{
+        margin-top:50px;
+        font-size:40px;
+        font-weight:bold;
+        font-family:Cambria;
+    }
+    .add table{
+        font-family:tahoma;
+        font-size:13px;
+    }
+</style>
+<div class="title text-center">
+    <p>Student's List</p>
 </div>
 
-<div>
+<div class="add">
     <a class="btn btn-dark float-right" asp-action="Create">Add New Student</a>
 </div>
 <!--
