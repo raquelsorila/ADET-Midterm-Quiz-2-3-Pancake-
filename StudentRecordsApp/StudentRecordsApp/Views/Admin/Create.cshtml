@@ -1,0 +1,37 @@
+﻿@model User
+
+<h1 class="bg-info text-white">Create User</h1>
+<a asp-action="Index" class="btn btn-secondary">Back</a>
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="UserID">User ID</label>
+        <input asp-for="UserID" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Name">Username</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="FirstName">First Name</label>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName">Last Name</label>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Address">Address</label>
+        <input asp-for="Address" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
