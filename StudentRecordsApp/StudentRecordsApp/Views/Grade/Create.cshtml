@@ -1,0 +1,219 @@
+﻿@model StudentRecordsApp.Models.Grade
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Grade</h4>
+<hr />
+<div class="row">
+    <div class="col-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label asp-for="StudentID" class="control-label"></label>
+                        <select asp-for="StudentID" class="form-control" asp-items="ViewBag.StudentID">
+                            <option value="">-- Select User --</option>
+                        </select>
+                        <span asp-validation-for="StudentID" class="text-danger" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prelim_Quiz1" class="control-label"></label>
+                        <input asp-for="Prelim_Quiz1" class="form-control" />
+                        <span asp-validation-for="Prelim_Quiz1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prelim_Quiz2" class="control-label"></label>
+                        <input asp-for="Prelim_Quiz2" class="form-control" />
+                        <span asp-validation-for="Prelim_Quiz2" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prelim_Quiz3" class="control-label"></label>
+                        <input asp-for="Prelim_Quiz3" class="form-control" />
+                        <span asp-validation-for="Prelim_Quiz3" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prelim_Assign1" class="control-label"></label>
+                        <input asp-for="Prelim_Assign1" class="form-control" />
+                        <span asp-validation-for="Prelim_Assign1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prelim_Assign2" class="control-label"></label>
+                        <input asp-for="Prelim_Assign2" class="form-control" />
+                        <span asp-validation-for="Prelim_Assign2" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prelim_Assign3" class="control-label"></label>
+                        <input asp-for="Prelim_Assign3" class="form-control" />
+                        <span asp-validation-for="Prelim_Assign3" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Midterm_Quiz1" class="control-label"></label>
+                        <input asp-for="Midterm_Quiz1" class="form-control" />
+                        <span asp-validation-for="Midterm_Quiz1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Midterm_Quiz2" class="control-label"></label>
+                        <input asp-for="Midterm_Quiz2" class="form-control" />
+                        <span asp-validation-for="Midterm_Quiz2" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Midterm_Quiz3" class="control-label"></label>
+                        <input asp-for="Midterm_Quiz3" class="form-control" />
+                        <span asp-validation-for="Midterm_Quiz3" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Midterm_Assign1" class="control-label"></label>
+                        <input asp-for="Midterm_Assign1" class="form-control" />
+                        <span asp-validation-for="Midterm_Assign1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Midterm_Assign2" class="control-label"></label>
+                        <input asp-for="Midterm_Assign2" class="form-control" />
+                        <span asp-validation-for="Midterm_Assign2" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Midterm_Assign3" class="control-label"></label>
+                        <input asp-for="Midterm_Assign3" class="form-control" />
+                        <span asp-validation-for="Midterm_Assign3" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prefinal_Quiz1" class="control-label"></label>
+                        <input asp-for="Prefinal_Quiz1" class="form-control" />
+                        <span asp-validation-for="Prefinal_Quiz1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prefinal_Quiz2" class="control-label"></label>
+                        <input asp-for="Prefinal_Quiz2" class="form-control" />
+                        <span asp-validation-for="Prefinal_Quiz2" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prefinal_Quiz3" class="control-label"></label>
+                        <input asp-for="Prefinal_Quiz3" class="form-control" />
+                        <span asp-validation-for="Prefinal_Quiz3" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prefinal_Assign1" class="control-label"></label>
+                        <input asp-for="Prefinal_Assign1" class="form-control" />
+                        <span asp-validation-for="Prefinal_Assign1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prefinal_Assign2" class="control-label"></label>
+                        <input asp-for="Prefinal_Assign2" class="form-control" />
+                        <span asp-validation-for="Prefinal_Assign2" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Prefinal_Assign3" class="control-label"></label>
+                        <input asp-for="Prefinal_Assign3" class="form-control" />
+                        <span asp-validation-for="Prefinal_Assign3" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Final_Quiz1" class="control-label"></label>
+                        <input asp-for="Final_Quiz1" class="form-control" />
+                        <span asp-validation-for="Final_Quiz1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Final_Quiz2" class="control-label"></label>
+                        <input asp-for="Final_Quiz2" class="form-control" />
+                        <span asp-validation-for="Final_Quiz2" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Final_Quiz3" class="control-label"></label>
+                        <input asp-for="Final_Quiz3" class="form-control" />
+                        <span asp-validation-for="Final_Quiz3" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Final_Assign1" class="control-label"></label>
+                        <input asp-for="Final_Assign1" class="form-control" />
+                        <span asp-validation-for="Final_Assign1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Final_Assign2" class="control-label"></label>
+                        <input asp-for="Final_Assign2" class="form-control" />
+                        <span asp-validation-for="Final_Assign2" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label asp-for="Final_Assign3" class="control-label"></label>
+                        <input asp-for="Final_Assign3" class="form-control" />
+                        <span asp-validation-for="Final_Assign3" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

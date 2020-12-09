@@ -1,0 +1,162 @@
+﻿@model StudentRecordsApp.Models.Grade
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Grade</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prelim_Quiz1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prelim_Quiz1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prelim_Quiz2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prelim_Quiz2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prelim_Quiz3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prelim_Quiz3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prelim_Assign1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prelim_Assign1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prelim_Assign2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prelim_Assign2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prelim_Assign3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prelim_Assign3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Midterm_Quiz1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Midterm_Quiz1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Midterm_Quiz2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Midterm_Quiz2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Midterm_Quiz3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Midterm_Quiz3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Midterm_Assign1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Midterm_Assign1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Midterm_Assign2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Midterm_Assign2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Midterm_Assign3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Midterm_Assign3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prefinal_Quiz1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prefinal_Quiz1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prefinal_Quiz2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prefinal_Quiz2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prefinal_Quiz3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prefinal_Quiz3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prefinal_Assign1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prefinal_Assign1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prefinal_Assign2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prefinal_Assign2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prefinal_Assign3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prefinal_Assign3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Final_Quiz1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Final_Quiz1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Final_Quiz2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Final_Quiz2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Final_Quiz3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Final_Quiz3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Final_Assign1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Final_Assign1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Final_Assign2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Final_Assign2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Final_Assign3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Final_Assign3)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
