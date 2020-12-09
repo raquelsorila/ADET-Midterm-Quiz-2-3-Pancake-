@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using StudentRecordsApp.Models;
 using System;
 using System.Collections.Generic;
@@ -13,11 +15,13 @@ namespace StudentRecordsApp.Controllers
     {
         private UserManager<AppUser> userManager;
         private IPasswordHasher<AppUser> passwordHasher;
+        private readonly AppIdentityDbContext _context;
 
-        public AdminController(UserManager<AppUser> usrMgr, IPasswordHasher<AppUser> passwordHash)
+        public AdminController(UserManager<AppUser> usrMgr, IPasswordHasher<AppUser> passwordHash, AppIdentityDbContext context)
         {
             userManager = usrMgr;
             passwordHasher = passwordHash;
+            _context = context;
         }
 
         [Authorize(Roles = "Admin")]
@@ -27,7 +31,11 @@ namespace StudentRecordsApp.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        public ViewResult Create() => View();
+        public ViewResult Create()
+        {
+            StudentsDropdownList();
+            return View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> Create(User user)
@@ -41,7 +49,8 @@ namespace StudentRecordsApp.Controllers
                     UserID = user.UserID,
                     FirstName = user.FirstName,
                     LastName = user.LastName,
-                    Address = user.Address
+                    Address = user.Address,
+                    EmailConfirmed = true
                 };
 
                 IdentityResult result = await userManager.CreateAsync(appUser, user.Password);
@@ -61,9 +70,14 @@ namespace StudentRecordsApp.Controllers
         {
             AppUser user = await userManager.FindByIdAsync(id);
             if (user != null)
+            {
+                StudentsDropdownList(user.UserID);
                 return View(user);
+            }
             else
+            {
                 return RedirectToAction("Index");
+            }
         }
 
         [HttpPost]
@@ -138,6 +152,15 @@ namespace StudentRecordsApp.Controllers
             else
                 ModelState.AddModelError("", "User Not Found");
             return View("Index", userManager.Users);
+        }
+
+        private void StudentsDropdownList(object selectedStudent = null)
+        {
+            var studentsQuery = from u in _context.Student
+                                orderby u.Id
+                                select u;
+
+            ViewBag.StudentID = new SelectList(studentsQuery.AsNoTracking(), "Id", "FullName", selectedStudent);
         }
     }
 }

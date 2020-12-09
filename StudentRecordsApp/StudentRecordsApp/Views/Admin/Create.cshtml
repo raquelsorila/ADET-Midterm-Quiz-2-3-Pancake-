@@ -7,7 +7,10 @@
 <form method="post">
     <div class="form-group">
         <label asp-for="UserID">User ID</label>
-        <input asp-for="UserID" class="form-control" />
+        <select asp-for="UserID" class="form-control" asp-items="ViewBag.StudentID">
+            <option value="">-- Select User --</option>
+            <option value="0">-- N/A --</option>
+        </select>
     </div>
     <div class="form-group">
         <label asp-for="Name">Username</label>
