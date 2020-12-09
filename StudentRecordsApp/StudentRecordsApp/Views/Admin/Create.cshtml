@@ -1,0 +1,52 @@
+﻿@model User
+
+<h4>Create new user</h4>
+<hr />
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<div class="row">
+    <div class="col-6 text-center">
+        <form method="post">
+            <div class="form-group text-left">
+                <label asp-for="UserID">Student Name</label>
+                <select asp-for="UserID" class="form-control" asp-items="ViewBag.StudentID">
+                    <option value="">-- Select User --</option>
+                    <option value="0">-- N/A --</option>
+                </select>
+            </div>
+            <div class="form-group text-left">
+                <label asp-for="Name">Username</label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group text-left">
+                <label asp-for="FirstName">First Name</label>
+                <input asp-for="FirstName" class="form-control" />
+            </div>
+            <div class="form-group text-left">
+                <label asp-for="LastName">Last Name</label>
+                <input asp-for="LastName" class="form-control" />
+            </div>
+            <div class="form-group text-left">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group text-left">
+                <label asp-for="Address">Address</label>
+                <input asp-for="Address" class="form-control" />
+            </div>
+            <div class="form-group text-left">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" type="password"/>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm" style="width: 150px;">Create</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="pt-2">
+    <a asp-action="Index">
+        <button class="btn btn-dark btn-sm">Back to List</button>
+    </a>
+</div>

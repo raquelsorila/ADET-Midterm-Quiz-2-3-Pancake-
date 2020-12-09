@@ -1,0 +1,291 @@
+﻿@model StudentRecordsApp.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StudentId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <center>
+            <div>
+                <h5>Grades</h5>
+                <dl class="row">
+
+
+                    <!--PRELIM-->
+                    <div class="table TablePrelim">
+
+                        <table class=" w-75 Prelim">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th colspan="2">Preliminary</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th> </th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th style="font-weight:bold;">Average</th>
+                                </tr>
+                            </thead>
+                            @foreach (var item in Model.Grades)
+                            {
+                                double totalPrelimQuiz = item.Prelim_Quiz1 + item.Prelim_Quiz2 + item.Prelim_Quiz3;
+                                double averagePrelimQuiz = totalPrelimQuiz / 3;
+                                double roundedAveQuiz = Math.Round((double)averagePrelimQuiz, 2);
+
+                                double totalPrelimAssign = item.Prelim_Assign1 + item.Prelim_Assign2 + item.Prelim_Assign3;
+                                double averagePrelimAssign = totalPrelimAssign / 3;
+                                double roundedAveAssign = Math.Round((double)averagePrelimAssign, 2);
+
+                                double prelimTotal = averagePrelimQuiz + averagePrelimAssign;
+                                double PrelimGradeAve = Math.Round((double)prelimTotal / 2, 2);
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight:bold;">Quizzes</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prelim_Quiz1)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prelim_Quiz2)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prelim_Quiz3)</td>
+                                        <td>@Html.DisplayFor(modelItem => roundedAveQuiz)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:bold;">Assignments</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prelim_Assign1)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prelim_Assign2)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prelim_Assign3)</td>
+                                        <td>@Html.DisplayFor(modelItem => roundedAveAssign)</td>
+                                    </tr>
+                                    <tr class="bg-secondary text-light">
+                                        <td style="font-weight:bold;" colspan="4">Prelim Grade</td>
+                                        <td style="font-weight:bold;">@Html.DisplayFor(modelItem => PrelimGradeAve)</td>
+                                    </tr>
+                                </tbody>
+                            }
+                        </table>
+                    </div>
+                    <!---->
+                    <!--MIDTERMS-->
+                    <div class="table TableMidterm">
+
+                        <table class=" w-75 Midterm">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th colspan="2">Midterm</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th> </th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th style="font-weight:bold;">Average</th>
+                                </tr>
+                            </thead>
+                            @foreach (var item in Model.Grades)
+                            {
+                                double totalMidtermQuiz = item.Midterm_Quiz1 + item.Midterm_Quiz2 + item.Midterm_Quiz3;
+                                double averageMidtermQuiz = totalMidtermQuiz / 3;
+                                double roundedAveQuiz = Math.Round((double)averageMidtermQuiz, 2);
+
+                                double totalMidtermAssign = item.Midterm_Assign1 + item.Midterm_Assign2 + item.Midterm_Assign3;
+                                double averageMidtermAssign = totalMidtermAssign / 3;
+                                double roundedAveAssign = Math.Round((double)averageMidtermAssign, 2);
+
+                                double MidtermTotal = averageMidtermQuiz + averageMidtermAssign;
+                                double MidtermGradeAve = Math.Round((double)MidtermTotal / 2, 2);
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight:bold;">Quizzes</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Midterm_Quiz1)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Midterm_Quiz2)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Midterm_Quiz3)</td>
+                                        <td>@Html.DisplayFor(modelItem => roundedAveQuiz)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:bold;">Assignments</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Midterm_Assign1)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Midterm_Assign2)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Midterm_Assign3)</td>
+                                        <td>@Html.DisplayFor(modelItem => roundedAveAssign)</td>
+                                    </tr>
+                                    <tr class="bg-secondary text-light">
+                                        <td style="font-weight:bold;" colspan="4">Midterm Grade</td>
+                                        <td style="font-weight:bold;">@Html.DisplayFor(modelItem => MidtermGradeAve)</td>
+                                    </tr>
+                                </tbody>
+                            }
+                        </table>
+                    </div>
+
+
+                    <!--PREfinals-->
+
+                    <div class="table TablePrefinal">
+
+                        <table class=" w-75 Prefinal">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th colspan="2">Prefinals</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th> </th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th style="font-weight:bold;">Average</th>
+                                </tr>
+                            </thead>
+                            @foreach (var item in Model.Grades)
+                            {
+                                double totalPrefinalQuiz = item.Prefinal_Quiz1 + item.Prefinal_Quiz2 + item.Prefinal_Quiz3;
+                                double averagePrefinalQuiz = totalPrefinalQuiz / 3;
+                                double roundedAveQuiz = Math.Round((double)averagePrefinalQuiz, 2);
+
+                                double totalPrefinalAssign = item.Prefinal_Assign1 + item.Prefinal_Assign2 + item.Prefinal_Assign3;
+                                double averagePrefinalAssign = totalPrefinalAssign / 3;
+                                double roundedAveAssign = Math.Round((double)averagePrefinalAssign, 2);
+
+                                double PrefinalTotal = averagePrefinalQuiz + averagePrefinalAssign;
+                                double PrefinalGradeAve = Math.Round((double)PrefinalTotal / 2, 2);
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight:bold;">Quizzes</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prefinal_Quiz1)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prefinal_Quiz2)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prefinal_Quiz3)</td>
+                                        <td>@Html.DisplayFor(modelItem => roundedAveQuiz)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:bold;">Assignments</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prefinal_Assign1)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prefinal_Assign2)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Prefinal_Assign3)</td>
+                                        <td>@Html.DisplayFor(modelItem => roundedAveAssign)</td>
+                                    </tr>
+                                    <tr class="bg-secondary text-light">
+                                        <td style="font-weight:bold;" colspan="4">Prefinals Grade</td>
+                                        <td style="font-weight:bold;">@Html.DisplayFor(modelItem => PrefinalGradeAve)</td>
+                                    </tr>
+                                </tbody>
+                            }
+                        </table>
+                    </div>
+
+                    <!--FINALS-->
+
+                    <div class="table TableFinal">
+
+                        <table class=" w-75 Final">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th colspan="2">Finals</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <thead class="thead-light">
+                                <tr>
+                                    <th> </th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th style="font-weight:bold;">Average</th>
+                                </tr>
+                            </thead>
+                            @foreach (var item in Model.Grades)
+                            {
+                                double totalFinalQuiz = item.Final_Quiz1 + item.Final_Quiz2 + item.Final_Quiz3;
+                                double averageFinalQuiz = totalFinalQuiz / 3;
+                                double roundedAveQuiz = Math.Round((double)averageFinalQuiz, 2);
+
+                                double totalFinalAssign = item.Final_Assign1 + item.Final_Assign2 + item.Final_Assign3;
+                                double averageFinalAssign = totalFinalAssign / 3;
+                                double roundedAveAssign = Math.Round((double)averageFinalAssign, 2);
+
+                                double FinalTotal = averageFinalQuiz + averageFinalAssign;
+                                double FinalGradeAve = Math.Round((double)FinalTotal / 2, 2);
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight:bold;">Quizzes</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Final_Quiz1)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Final_Quiz2)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Final_Quiz3)</td>
+                                        <td>@Html.DisplayFor(modelItem => roundedAveQuiz)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:bold;">Assignments</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Final_Assign1)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Final_Assign2)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Final_Assign3)</td>
+                                        <td>@Html.DisplayFor(modelItem => roundedAveAssign)</td>
+                                    </tr>
+                                    <tr class="bg-secondary text-light">
+                                        <td style="font-weight:bold;" colspan="4">Finals Grade</td>
+                                        <td style="font-weight:bold;">@Html.DisplayFor(modelItem => FinalGradeAve)</td>
+                                    </tr>
+                                </tbody>
+                            }
+                        </table>
+                    </div>
+                </dl>
+            </div>
+        </center>
+
+    </dl>
+</div>
