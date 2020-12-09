@@ -102,6 +102,7 @@ namespace StudentRecordsApp.Controllers
                 {
                     _context.Update(grade);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction("Details", "Student", new { id = grade.StudentID });
                 }
                 catch (DbUpdateConcurrencyException)
                 {

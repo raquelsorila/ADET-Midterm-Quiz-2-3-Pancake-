@@ -64,6 +64,39 @@ namespace PancakeApp.Controllers
             {
                 _context.Add(user);
                 await _context.SaveChangesAsync();
+
+                var userId = user.Id;
+                var grade = new Grade { 
+                    Prelim_Assign1 = 0,    
+                    Prelim_Assign2 = 0,    
+                    Prelim_Assign3 = 0,    
+                    Prelim_Quiz1 = 0,    
+                    Prelim_Quiz2 = 0,    
+                    Prelim_Quiz3 = 0,    
+                    Midterm_Assign1 = 0,    
+                    Midterm_Assign2 = 0,    
+                    Midterm_Assign3 = 0,    
+                    Midterm_Quiz1 = 0,    
+                    Midterm_Quiz2 = 0,    
+                    Midterm_Quiz3 = 0,    
+                    Prefinal_Assign1 = 0,    
+                    Prefinal_Assign2 = 0,    
+                    Prefinal_Assign3 = 0,    
+                    Prefinal_Quiz1 = 0,    
+                    Prefinal_Quiz2 = 0,    
+                    Prefinal_Quiz3 = 0,    
+                    Final_Assign1 = 0,    
+                    Final_Assign2 = 0,    
+                    Final_Assign3 = 0,    
+                    Final_Quiz1 = 0,    
+                    Final_Quiz2 = 0,    
+                    Final_Quiz3 = 0,
+                    UserID = userId
+                };
+
+                _context.Add<Grade>(grade);
+                _context.SaveChanges();
+
                 return RedirectToAction(nameof(Index));
             }
             return View(user);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QGFW8lgF4H1AyXrF0C++RX+QRT1g7swQdt95f60P0xVguCad6tJlxwIqlkMP9wnz+HqgV6UtPD5vcR5EU7sVmw==",
+  "dgSpecHash": "KioQ7RD1moFxLOJSENeUbC2F7c+0Ws9UqvvGzUeQ9qmn7OpnKhQCbNHFYpPd3ytoIiQ+WSnuZSsa6szghoYN+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\My Computer\\source\\repos\\StudentRecordsApp\\StudentRecordsApp\\StudentRecordsApp.csproj",
+  "projectFilePath": "D:\\ASP PROJECTS\\Pancake\\ADET-Midterm-Quiz-2-3-Pancake-\\StudentRecordsApp\\StudentRecordsApp\\StudentRecordsApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\My Computer\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

@@ -1,30 +1,65 @@
 ﻿@model IEnumerable<AppUser>
 
-<h1 class="bg-info text-white">All Users</h1>
-<a asp-action="Create" class="btn btn-secondary">Create a User</a>
+<p>
+    <center>
+        <h3>Users</h3>
+    </center>
+    <a asp-action="Create" class="btn btn-secondary">New User</a>
+</p>
 
-<table class="table table-sm table-bordered">
-    <tr><th>User ID</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Address</th><th>Update</th><th>Delete</th></tr>
-    @foreach (AppUser user in Model)
-    {
+<table class="table">
+    <thead>
         <tr>
-            <td>@user.UserID</td>
-            <td>@user.FirstName</td>
-            <td>@user.LastName</td>
-            <td>@user.Email</td>
-            <td>@user.Address</td>
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
             <td>
-                <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@user.Id">
-                    Update
-                </a>
+                @Html.DisplayFor(modelItem => item.UserID)
             </td>
             <td>
-                <form asp-action="Delete" asp-route-id="@user.Id" method="post">
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td class="pr-0">
+                <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@item.Id">
+                    Edit
+                </a>
+            </td>
+            <td class="pl-1">
+                <form asp-action="Delete" asp-route-id="@item.Id" method="post">
                     <button type="submit" class="btn btn-sm btn-danger">
                         Delete
                     </button>
                 </form>
             </td>
         </tr>
-    }
+        }
+    </tbody>
 </table>

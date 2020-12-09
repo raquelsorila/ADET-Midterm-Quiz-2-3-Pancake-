@@ -24,7 +24,20 @@ namespace StudentRecordsApp.Controllers
         {
             AppUser user = await userManager.GetUserAsync(HttpContext.User);
             string message = "Hello " + user.UserName;
-            return View((object)message);
+
+            var admin = await userManager.IsInRoleAsync(user, "Admin");
+            var userId = user.UserID;
+
+            if (admin)
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+            else
+            {
+                return RedirectToAction("Info", "Student", new { id = userId });
+            }
+
+            //return View((object)message);
         }
     }
 }

@@ -103,6 +103,7 @@ namespace PancakeApp.Controllers
                 {
                     _context.Update(grade);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction("Details", "Users", new { id = grade.UserID });
                 }
                 catch (DbUpdateConcurrencyException)
                 {

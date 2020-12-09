@@ -8878,19 +8878,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rance Audric\\.nuget\\packages\\": {}
+    "C:\\Users\\My Computer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rance Audric\\source\\repos\\ADET-Midterm-Quiz-2-3-Pancake-\\PancakeApp\\PancakeApp\\PancakeApp.csproj",
+      "projectUniqueName": "D:\\ASP PROJECTS\\Pancake\\ADET-Midterm-Quiz-2-3-Pancake-\\PancakeApp\\PancakeApp\\PancakeApp.csproj",
       "projectName": "PancakeApp",
-      "projectPath": "C:\\Users\\Rance Audric\\source\\repos\\ADET-Midterm-Quiz-2-3-Pancake-\\PancakeApp\\PancakeApp\\PancakeApp.csproj",
-      "packagesPath": "C:\\Users\\Rance Audric\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rance Audric\\source\\repos\\ADET-Midterm-Quiz-2-3-Pancake-\\PancakeApp\\PancakeApp\\obj\\",
+      "projectPath": "D:\\ASP PROJECTS\\Pancake\\ADET-Midterm-Quiz-2-3-Pancake-\\PancakeApp\\PancakeApp\\PancakeApp.csproj",
+      "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
+      "outputPath": "D:\\ASP PROJECTS\\Pancake\\ADET-Midterm-Quiz-2-3-Pancake-\\PancakeApp\\PancakeApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rance Audric\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8902,6 +8902,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -8913,6 +8914,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
@@ -8955,7 +8957,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

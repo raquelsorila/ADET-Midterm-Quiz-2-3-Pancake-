@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\My Computer\\source\\repos\\StudentRecordsApp\\StudentRecordsApp\\StudentRecordsApp.csproj": {}
+    "D:\\ASP PROJECTS\\Pancake\\ADET-Midterm-Quiz-2-3-Pancake-\\StudentRecordsApp\\StudentRecordsApp\\StudentRecordsApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\My Computer\\source\\repos\\StudentRecordsApp\\StudentRecordsApp\\StudentRecordsApp.csproj": {
+    "D:\\ASP PROJECTS\\Pancake\\ADET-Midterm-Quiz-2-3-Pancake-\\StudentRecordsApp\\StudentRecordsApp\\StudentRecordsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\My Computer\\source\\repos\\StudentRecordsApp\\StudentRecordsApp\\StudentRecordsApp.csproj",
+        "projectUniqueName": "D:\\ASP PROJECTS\\Pancake\\ADET-Midterm-Quiz-2-3-Pancake-\\StudentRecordsApp\\StudentRecordsApp\\StudentRecordsApp.csproj",
         "projectName": "StudentRecordsApp",
-        "projectPath": "C:\\Users\\My Computer\\source\\repos\\StudentRecordsApp\\StudentRecordsApp\\StudentRecordsApp.csproj",
+        "projectPath": "D:\\ASP PROJECTS\\Pancake\\ADET-Midterm-Quiz-2-3-Pancake-\\StudentRecordsApp\\StudentRecordsApp\\StudentRecordsApp.csproj",
         "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\My Computer\\source\\repos\\StudentRecordsApp\\StudentRecordsApp\\obj\\",
+        "outputPath": "D:\\ASP PROJECTS\\Pancake\\ADET-Midterm-Quiz-2-3-Pancake-\\StudentRecordsApp\\StudentRecordsApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",

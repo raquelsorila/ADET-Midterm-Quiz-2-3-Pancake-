@@ -57,7 +57,7 @@ namespace StudentRecordsApp.Controllers
                         }
                         else
                         {
-                            return RedirectToAction("Details", "Student", new { id = userId });
+                            return RedirectToAction("Info", "Student", new { id = userId });
                         }
                             
                     }

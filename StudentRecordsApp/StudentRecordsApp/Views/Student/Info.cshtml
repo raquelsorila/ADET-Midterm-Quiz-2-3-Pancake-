@@ -285,17 +285,6 @@
                     </div>
                 </dl>
             </div>
-
-
-            <div style="font-weight:bold; color:black;">
-                EDIT (
-                <a asp-action="Edit" asp-route-id="@Model.Id">Student Information</a> |
-                @foreach (var item in Model.Grades)
-                {
-                    int gradeId = item.Id;<a asp-action="Edit" asp-controller="Grade" asp-route-id="@gradeId">Grades</a>}
-                ) <br />
-                <a asp-action="Index">Back to List</a>
-            </div>
         </center>
 
     </dl>
