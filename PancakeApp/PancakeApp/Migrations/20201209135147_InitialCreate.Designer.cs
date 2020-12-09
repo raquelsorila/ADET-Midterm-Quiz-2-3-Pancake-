@@ -10,8 +10,8 @@ using PancakeApp.Data;
 namespace PancakeApp.Migrations
 {
     [DbContext(typeof(StudentRecordContext))]
-    [Migration("20201205180825_SeedInitialData")]
-    partial class SeedInitialData
+    [Migration("20201209135147_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -108,6 +108,95 @@ namespace PancakeApp.Migrations
                     b.HasIndex("UserID");
 
                     b.ToTable("Grade");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Final_Assign1 = 6,
+                            Final_Assign2 = 8,
+                            Final_Assign3 = 8,
+                            Final_Quiz1 = 7,
+                            Final_Quiz2 = 7,
+                            Final_Quiz3 = 7,
+                            Midterm_Assign1 = 6,
+                            Midterm_Assign2 = 5,
+                            Midterm_Assign3 = 9,
+                            Midterm_Quiz1 = 8,
+                            Midterm_Quiz2 = 7,
+                            Midterm_Quiz3 = 9,
+                            Prefinal_Assign1 = 6,
+                            Prefinal_Assign2 = 7,
+                            Prefinal_Assign3 = 7,
+                            Prefinal_Quiz1 = 5,
+                            Prefinal_Quiz2 = 7,
+                            Prefinal_Quiz3 = 9,
+                            Prelim_Assign1 = 6,
+                            Prelim_Assign2 = 7,
+                            Prelim_Assign3 = 6,
+                            Prelim_Quiz1 = 8,
+                            Prelim_Quiz2 = 7,
+                            Prelim_Quiz3 = 9,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Final_Assign1 = 6,
+                            Final_Assign2 = 8,
+                            Final_Assign3 = 8,
+                            Final_Quiz1 = 8,
+                            Final_Quiz2 = 7,
+                            Final_Quiz3 = 9,
+                            Midterm_Assign1 = 6,
+                            Midterm_Assign2 = 8,
+                            Midterm_Assign3 = 8,
+                            Midterm_Quiz1 = 8,
+                            Midterm_Quiz2 = 5,
+                            Midterm_Quiz3 = 9,
+                            Prefinal_Assign1 = 6,
+                            Prefinal_Assign2 = 7,
+                            Prefinal_Assign3 = 7,
+                            Prefinal_Quiz1 = 5,
+                            Prefinal_Quiz2 = 7,
+                            Prefinal_Quiz3 = 9,
+                            Prelim_Assign1 = 6,
+                            Prelim_Assign2 = 7,
+                            Prelim_Assign3 = 5,
+                            Prelim_Quiz1 = 7,
+                            Prelim_Quiz2 = 7,
+                            Prelim_Quiz3 = 9,
+                            UserID = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Final_Assign1 = 6,
+                            Final_Assign2 = 9,
+                            Final_Assign3 = 8,
+                            Final_Quiz1 = 5,
+                            Final_Quiz2 = 7,
+                            Final_Quiz3 = 7,
+                            Midterm_Assign1 = 6,
+                            Midterm_Assign2 = 8,
+                            Midterm_Assign3 = 8,
+                            Midterm_Quiz1 = 8,
+                            Midterm_Quiz2 = 5,
+                            Midterm_Quiz3 = 9,
+                            Prefinal_Assign1 = 6,
+                            Prefinal_Assign2 = 5,
+                            Prefinal_Assign3 = 7,
+                            Prefinal_Quiz1 = 5,
+                            Prefinal_Quiz2 = 7,
+                            Prefinal_Quiz3 = 9,
+                            Prelim_Assign1 = 6,
+                            Prelim_Assign2 = 7,
+                            Prelim_Assign3 = 5,
+                            Prelim_Quiz1 = 7,
+                            Prelim_Quiz2 = 7,
+                            Prelim_Quiz3 = 9,
+                            UserID = 3
+                        });
                 });
 
             modelBuilder.Entity("PancakeApp.Models.Student", b =>

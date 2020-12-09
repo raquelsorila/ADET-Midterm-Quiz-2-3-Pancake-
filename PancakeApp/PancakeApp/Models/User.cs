@@ -10,6 +10,7 @@ namespace PancakeApp.Models
     {
         public int Id { get; set; }
         [Display(Name = "Student ID")]
+
         public string UserId { get; set; }
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
