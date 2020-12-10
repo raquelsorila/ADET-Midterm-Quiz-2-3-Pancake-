@@ -23,7 +23,7 @@ namespace StudentRecordsApp.Controllers
         public async Task<IActionResult> Index()
         {
             AppUser user = await userManager.GetUserAsync(HttpContext.User);
-            string message = "Hello " + user.UserName;
+            //string message = "Hello " + user.UserName;
 
             var admin = await userManager.IsInRoleAsync(user, "Admin");
             var userId = user.UserID;

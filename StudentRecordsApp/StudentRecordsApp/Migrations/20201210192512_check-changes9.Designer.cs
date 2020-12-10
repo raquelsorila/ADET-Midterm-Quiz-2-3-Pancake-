@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentRecordsApp.Models;
 
 namespace StudentRecordsApp.Migrations
 {
     [DbContext(typeof(AppIdentityDbContext))]
-    partial class AppIdentityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201210192512_check-changes9")]
+    partial class checkchanges9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,8 +50,8 @@ namespace StudentRecordsApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "341743f0",
-                            ConcurrencyStamp = "341743f0",
+                            Id = "341743f0-asd2-42de-afbf-59kmkkmk72cf6",
+                            ConcurrencyStamp = "341743f0-asd2-42de-afbf-59kmkkmk72cf6",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         });
@@ -142,8 +144,8 @@ namespace StudentRecordsApp.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "02174cf0",
-                            RoleId = "341743f0"
+                            UserId = "02174cf0-9412-4cfe-afbf-59f706d72cf6",
+                            RoleId = "341743f0-asd2-42de-afbf-59kmkkmk72cf6"
                         });
                 });
 
@@ -245,9 +247,9 @@ namespace StudentRecordsApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "02174cf0",
+                            Id = "02174cf0-9412-4cfe-afbf-59f706d72cf6",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "166b4f22-a150-450f-8480-1448a1e2817b",
+                            ConcurrencyStamp = "04484198-567b-4e0f-93f9-778591af9879",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Raquel",
@@ -257,7 +259,7 @@ namespace StudentRecordsApp.Migrations
                             NormalizedUserName = "ADMIN",
                             PasswordHash = "AQAAAAEAACcQAAAAEEXvj4HDNFuXn4B2w0suAsDOGEoaykEtqSVJa7xE3m6Kf2reoj3Q7FFc0JHW6A/rzQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "eb7a9404-6d9e-477f-a7ca-fc44c8a7eb97",
+                            SecurityStamp = "0a50d519-3489-4247-9c86-9ed41a547289",
                             TwoFactorEnabled = false,
                             UserID = "0",
                             UserName = "admin"
