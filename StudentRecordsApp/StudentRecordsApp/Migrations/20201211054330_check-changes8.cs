@@ -62,7 +62,7 @@ namespace StudentRecordsApp.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "Address", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserID", "UserName" },
-                values: new object[] { "02174cf0", 0, null, "9b8aa748-6b01-4cbf-838c-23c3fb468d72", "admin@gmail.com", true, "Raquel", "Sorila", false, null, "ADMIN@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEEXvj4HDNFuXn4B2w0suAsDOGEoaykEtqSVJa7xE3m6Kf2reoj3Q7FFc0JHW6A/rzQ==", null, false, "be0f730f-b7ea-4545-ac52-64da49c4d5e8", false, "0", "admin" });
+                values: new object[] { "02174cf0", 0, null, "fea72734-9174-4db6-9ad2-fcc0c94692cc", "admin@gmail.com", true, "Raquel", "Sorila", false, null, "ADMIN@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEEXvj4HDNFuXn4B2w0suAsDOGEoaykEtqSVJa7xE3m6Kf2reoj3Q7FFc0JHW6A/rzQ==", null, false, "2f37f786-0dbb-40e1-85f3-fa60613a6a2a", false, "0", "admin" });
 
             migrationBuilder.InsertData(
                 table: "Student",

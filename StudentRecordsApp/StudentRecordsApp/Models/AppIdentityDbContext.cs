@@ -61,27 +61,29 @@ namespace StudentRecordsApp.Models
                     new Student
                     {
                         Id = 1,
-                        StudentId = "100001",
-                        FirstName = "Carson",
-                        LastName = "Alexander",
-                        Email = "carson_alexander@email.com",
-                        Address = "Cavite"
+                        StudentId = "1624-18",
+                        FirstName = "Ronald",
+                        LastName = "Colata",
+                        MiddleName = "P.",
+                        Email = "ronaldcolata@email.com",
+                        Address = "Las Pinas City"
                     }, new Student
                     {
                         Id = 2,
-                        LastName = "Alonso",
-                        FirstName = "Meredith",
-                        StudentId = "100002",
-                        Email = "meredith_alonso@email.com",
-                        Address = "Cavite"
-                    }, new Student
+                        LastName = "Guyala",
+                        FirstName = "Kyla Joyce",
+                        StudentId = "1811-18",
+                        Email = "kylaguyala@email.com",
+                        Address = "Muntinlupa City"
+                    },
+                    new Student
                     {
                         Id = 3,
-                        LastName = "Anand",
-                        FirstName = "Arturo",
-                        StudentId = "100003",
-                        Email = "arturo_anand@email.com",
-                        Address = "Cavite"
+                        LastName = "Rosales",
+                        FirstName = "Iris",
+                        StudentId = "1238-18",
+                        Email = "irisrosalesmail.com",
+                        Address = "Sta. Rosa Laguna"
                     }
                 );
 
@@ -93,30 +95,30 @@ namespace StudentRecordsApp.Models
                     {
                         Id = 1,
                         StudentID = 1,
-                        Prelim_Assign1 = 6,
-                        Prelim_Assign2 = 7,
-                        Prelim_Assign3 = 6,
-                        Prelim_Quiz1 = 8,
-                        Prelim_Quiz2 = 7,
-                        Prelim_Quiz3 = 9,
-                        Midterm_Assign1 = 6,
-                        Midterm_Assign2 = 5,
-                        Midterm_Assign3 = 9,
-                        Midterm_Quiz1 = 8,
-                        Midterm_Quiz2 = 7,
-                        Midterm_Quiz3 = 9,
-                        Prefinal_Assign1 = 6,
-                        Prefinal_Assign2 = 7,
-                        Prefinal_Assign3 = 7,
-                        Prefinal_Quiz1 = 5,
-                        Prefinal_Quiz2 = 7,
-                        Prefinal_Quiz3 = 9,
-                        Final_Assign1 = 6,
-                        Final_Assign2 = 8,
-                        Final_Assign3 = 8,
-                        Final_Quiz1 = 7,
-                        Final_Quiz2 = 7,
-                        Final_Quiz3 = 7
+                        Prelim_Assign1 = 90,
+                        Prelim_Assign2 = 85,
+                        Prelim_Assign3 = 88,
+                        Prelim_Quiz1 = 87,
+                        Prelim_Quiz2 = 89,
+                        Prelim_Quiz3 = 90,
+                        Midterm_Assign1 = 91,
+                        Midterm_Assign2 = 92,
+                        Midterm_Assign3 = 93,
+                        Midterm_Quiz1 = 84,
+                        Midterm_Quiz2 = 86,
+                        Midterm_Quiz3 = 93,
+                        Prefinal_Assign1 = 97,
+                        Prefinal_Assign2 = 89,
+                        Prefinal_Assign3 = 90,
+                        Prefinal_Quiz1 = 97,
+                        Prefinal_Quiz2 = 87,
+                        Prefinal_Quiz3 = 83,
+                        Final_Assign1 = 82,
+                        Final_Assign2 = 80,
+                        Final_Assign3 = 78,
+                        Final_Quiz1 = 90,
+                        Final_Quiz2 = 70,
+                        Final_Quiz3 = 70
                     },
                     new Grade
                     {

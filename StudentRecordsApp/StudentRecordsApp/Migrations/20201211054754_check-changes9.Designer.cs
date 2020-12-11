@@ -10,8 +10,8 @@ using StudentRecordsApp.Models;
 namespace StudentRecordsApp.Migrations
 {
     [DbContext(typeof(AppIdentityDbContext))]
-    [Migration("20201211050215_check-changes8")]
-    partial class checkchanges8
+    [Migration("20201211054754_check-changes9")]
+    partial class checkchanges9
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,6 +46,15 @@ namespace StudentRecordsApp.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "341743f0",
+                            ConcurrencyStamp = "341743f0",
+                            Name = "Admin",
+                            NormalizedName = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -131,6 +140,13 @@ namespace StudentRecordsApp.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "02174cf0",
+                            RoleId = "341743f0"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -227,6 +243,27 @@ namespace StudentRecordsApp.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "02174cf0",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "4588c909-e700-4222-ad2f-dd6785442dee",
+                            Email = "admin@gmail.com",
+                            EmailConfirmed = true,
+                            FirstName = "Raquel",
+                            LastName = "Sorila",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@GMAIL.COM",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEXvj4HDNFuXn4B2w0suAsDOGEoaykEtqSVJa7xE3m6Kf2reoj3Q7FFc0JHW6A/rzQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "102a0f87-a75c-4dcf-8067-42903f1deeeb",
+                            TwoFactorEnabled = false,
+                            UserID = "0",
+                            UserName = "admin"
+                        });
                 });
 
             modelBuilder.Entity("StudentRecordsApp.Models.Grade", b =>
@@ -316,6 +353,95 @@ namespace StudentRecordsApp.Migrations
                     b.HasIndex("StudentID");
 
                     b.ToTable("Grade");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Final_Assign1 = 82,
+                            Final_Assign2 = 80,
+                            Final_Assign3 = 78,
+                            Final_Quiz1 = 90,
+                            Final_Quiz2 = 70,
+                            Final_Quiz3 = 70,
+                            Midterm_Assign1 = 91,
+                            Midterm_Assign2 = 92,
+                            Midterm_Assign3 = 93,
+                            Midterm_Quiz1 = 84,
+                            Midterm_Quiz2 = 86,
+                            Midterm_Quiz3 = 93,
+                            Prefinal_Assign1 = 97,
+                            Prefinal_Assign2 = 89,
+                            Prefinal_Assign3 = 90,
+                            Prefinal_Quiz1 = 97,
+                            Prefinal_Quiz2 = 87,
+                            Prefinal_Quiz3 = 83,
+                            Prelim_Assign1 = 90,
+                            Prelim_Assign2 = 85,
+                            Prelim_Assign3 = 88,
+                            Prelim_Quiz1 = 87,
+                            Prelim_Quiz2 = 89,
+                            Prelim_Quiz3 = 90,
+                            StudentID = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Final_Assign1 = 6,
+                            Final_Assign2 = 8,
+                            Final_Assign3 = 8,
+                            Final_Quiz1 = 8,
+                            Final_Quiz2 = 7,
+                            Final_Quiz3 = 9,
+                            Midterm_Assign1 = 6,
+                            Midterm_Assign2 = 8,
+                            Midterm_Assign3 = 8,
+                            Midterm_Quiz1 = 8,
+                            Midterm_Quiz2 = 5,
+                            Midterm_Quiz3 = 9,
+                            Prefinal_Assign1 = 6,
+                            Prefinal_Assign2 = 7,
+                            Prefinal_Assign3 = 7,
+                            Prefinal_Quiz1 = 5,
+                            Prefinal_Quiz2 = 7,
+                            Prefinal_Quiz3 = 9,
+                            Prelim_Assign1 = 6,
+                            Prelim_Assign2 = 7,
+                            Prelim_Assign3 = 5,
+                            Prelim_Quiz1 = 7,
+                            Prelim_Quiz2 = 7,
+                            Prelim_Quiz3 = 9,
+                            StudentID = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Final_Assign1 = 6,
+                            Final_Assign2 = 9,
+                            Final_Assign3 = 8,
+                            Final_Quiz1 = 5,
+                            Final_Quiz2 = 7,
+                            Final_Quiz3 = 7,
+                            Midterm_Assign1 = 6,
+                            Midterm_Assign2 = 8,
+                            Midterm_Assign3 = 8,
+                            Midterm_Quiz1 = 8,
+                            Midterm_Quiz2 = 5,
+                            Midterm_Quiz3 = 9,
+                            Prefinal_Assign1 = 6,
+                            Prefinal_Assign2 = 5,
+                            Prefinal_Assign3 = 7,
+                            Prefinal_Quiz1 = 5,
+                            Prefinal_Quiz2 = 7,
+                            Prefinal_Quiz3 = 9,
+                            Prelim_Assign1 = 6,
+                            Prelim_Assign2 = 7,
+                            Prelim_Assign3 = 5,
+                            Prelim_Quiz1 = 7,
+                            Prelim_Quiz2 = 7,
+                            Prelim_Quiz3 = 9,
+                            StudentID = 3
+                        });
                 });
 
             modelBuilder.Entity("StudentRecordsApp.Models.Student", b =>
@@ -346,6 +472,36 @@ namespace StudentRecordsApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Student");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "Las Pinas City",
+                            Email = "ronaldcolata@email.com",
+                            FirstName = "Ronald",
+                            LastName = "Colata",
+                            MiddleName = "P.",
+                            StudentId = "1624-18"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Address = "Muntinlupa City",
+                            Email = "kylaguyala@email.com",
+                            FirstName = "Kyla Joyce",
+                            LastName = "Guyala",
+                            StudentId = "1811-18"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Address = "Sta. Rosa Laguna",
+                            Email = "irisrosalesmail.com",
+                            FirstName = "Iris",
+                            LastName = "Rosales",
+                            StudentId = "1238-18"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
