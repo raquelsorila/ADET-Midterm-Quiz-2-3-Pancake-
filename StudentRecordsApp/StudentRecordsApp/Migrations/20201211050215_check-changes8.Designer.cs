@@ -10,8 +10,8 @@ using StudentRecordsApp.Models;
 namespace StudentRecordsApp.Migrations
 {
     [DbContext(typeof(AppIdentityDbContext))]
-    [Migration("20201210192743_check-changes10")]
-    partial class checkchanges10
+    [Migration("20201211050215_check-changes8")]
+    partial class checkchanges8
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,15 +46,6 @@ namespace StudentRecordsApp.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "341743f0",
-                            ConcurrencyStamp = "341743f0",
-                            Name = "Admin",
-                            NormalizedName = "Admin"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -140,13 +131,6 @@ namespace StudentRecordsApp.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = "02174cf0",
-                            RoleId = "341743f0"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -243,27 +227,6 @@ namespace StudentRecordsApp.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "02174cf0",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "166b4f22-a150-450f-8480-1448a1e2817b",
-                            Email = "admin@gmail.com",
-                            EmailConfirmed = true,
-                            FirstName = "Raquel",
-                            LastName = "Sorila",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "ADMIN@GMAIL.COM",
-                            NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEEXvj4HDNFuXn4B2w0suAsDOGEoaykEtqSVJa7xE3m6Kf2reoj3Q7FFc0JHW6A/rzQ==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "eb7a9404-6d9e-477f-a7ca-fc44c8a7eb97",
-                            TwoFactorEnabled = false,
-                            UserID = "0",
-                            UserName = "admin"
-                        });
                 });
 
             modelBuilder.Entity("StudentRecordsApp.Models.Grade", b =>
